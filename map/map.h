@@ -506,6 +506,7 @@ public:
 			if ((*it).first >= key)
 				return it;
 		}
+		return nullptr;
 	}
 
 	BSTIterator upper_bound(const KeyType& key) {
@@ -513,6 +514,7 @@ public:
 			if ((*it).first > key)
 				return it;
 		}
+		return nullptr;
 	}
 
 	Node* begin() {

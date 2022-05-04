@@ -294,9 +294,9 @@ private:
 			return false;
 		}
 
-		if (key < node->pair.first)
+		if (key < node->key)
 			findElement(node->left, key);
-		else if (key > node->pair.first)
+		else if (key > node->key)
 			findElement(node->right, key);
 		else {
 			return true;
@@ -456,7 +456,7 @@ public:
 			return node;
 		}
 
-		int& operator*() {
+		KeyType& operator*() {
 			return node->key;
 		}
 
@@ -472,7 +472,7 @@ public:
 		if (contains(key)) {
 			auto it = set<KeyType>::BSTIterator(this->begin());
 			for (it; it != this->back(); it++) {
-				if ((*it).first == key)
+				if (*it == key)
 					return it;
 			}
 		}
@@ -485,7 +485,8 @@ public:
 		for (auto it = set<KeyType>::BSTIterator(this->begin()); it != this->end(); it++) {
 			if (*it >= key)
 				return it;
-		}
+		} 
+		return nullptr;
 	}
 
 	BSTIterator upper_bound(const KeyType& key) {
@@ -493,6 +494,7 @@ public:
 			if (*it > key)
 				return it;
 		}
+		return nullptr;
 	}
 
 	Node* begin() {

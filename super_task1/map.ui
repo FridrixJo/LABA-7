@@ -95,10 +95,10 @@ color:rgb(0, 0, 255);</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>140</y>
-      <width>171</width>
-      <height>41</height>
+      <x>380</x>
+      <y>80</y>
+      <width>81</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -112,8 +112,8 @@ color:rgb(255, 255, 255)</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>200</y>
+      <x>380</x>
+      <y>130</y>
       <width>171</width>
       <height>41</height>
      </rect>
@@ -129,10 +129,10 @@ color:rgb(255, 255, 255)</string>
    <widget class="QSpinBox" name="spinBox_map">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>200</y>
+      <x>460</x>
+      <y>130</y>
       <width>71</width>
-      <height>41</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -145,10 +145,10 @@ color: rgb(0, 0, 255)</string>
    <widget class="QLineEdit" name="lineEdit_map">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>140</y>
+      <x>460</x>
+      <y>90</y>
       <width>141</width>
-      <height>41</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -156,6 +156,70 @@ color: rgb(0, 0, 255)</string>
 background-color: rgb(255, 255, 255);
 font: 700 20pt &quot;System&quot;;
 color: rgb(0, 0, 255)</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="MainSet">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>260</width>
+      <height>190</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="MainSetValue">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>200</y>
+      <width>260</width>
+      <height>190</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="InfoSet">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>403</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>160</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 20pt &quot;System&quot;;
+color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>Keys :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>160</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 20pt &quot;System&quot;;
+color:rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>Data:</string>
     </property>
    </widget>
   </widget>

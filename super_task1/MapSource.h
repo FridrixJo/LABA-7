@@ -2,11 +2,11 @@
 #define MAPSOURCE_H
 
 #include <iostream>
-#include "../../LABA$5/queue/queue/queue.h"
+#include "queue.h"
 #include <vector>
-#include "../../LABA$3/stack/stack/stack.h"
-#include "../../LABA$3/double_list/double_list/doube_list.h"
-#include "../../LABA$4/pair/pair.h"
+#include "stack.h"
+#include "pair.h"
+#include <QString>
 
 template <typename KeyType, typename ValueType>
 class map {
@@ -24,6 +24,7 @@ public:
 
     Node* root = nullptr;
     size_t m_size = 0;
+    QString SF,SS;
 
 private:
 
@@ -280,17 +281,31 @@ private:
         }
     }
 
-    void printTree(Node* root, int space = 0) {
+    void printTreeFirst(Node* root, int space = 0) {
         if (!root)
             return;
         const int COUNT = 3;
         space += COUNT;
-        printTree(root->right, space);
+        printTreeFirst(root->right, space);
         for (int i = COUNT; i < space; i++) {
-            std::cout << "  ";
+            SF.push_back("  ");
         }
-        std::cout << root->pair.second << "\n";
-        printTree(root->left, space);
+        SF.push_back(QString::fromStdString(root->pair.first) + '\n');
+        printTreeFirst(root->left, space);
+    }
+
+    void printTreeSecond(Node* root, int space = 0) {
+        if (!root)
+            return;
+        const int COUNT = 3;
+        space += COUNT;
+        printTreeSecond(root->right, space);
+        for (int i = COUNT; i < space; i++) {
+            SS.push_back("  ");
+        }
+        QString s;
+        SS.push_back(s.setNum(root->pair.second) + '\n');
+        printTreeSecond(root->left, space);
     }
 
     void changeValueType(Node* node, const KeyType& key, const ValueType& value) {
@@ -364,8 +379,14 @@ public:
             this->root = deleteNode(this->root, this->root->pair.first);
     }
 
-    void print() {
-        printTree(root);
+    void printFirst() {
+        SF = "";
+        printTreeFirst(root);
+    }
+
+    void printSecond() {
+        SS = "";
+        printTreeSecond(root);
     }
 
     void output() {
@@ -508,6 +529,7 @@ public:
             if ((*it).first >= key)
                 return it;
         }
+        return nullptr;
     }
 
     BSTIterator upper_bound(const KeyType& key) {
@@ -515,6 +537,7 @@ public:
             if ((*it).first > key)
                 return it;
         }
+        return nullptr;
     }
 
     Node* begin() {

@@ -9,7 +9,7 @@ Unordered_map::Unordered_map(QWidget *parent) :
 
     setFixedSize(640,480);
 
-    ui->comboBox_Umap->addItems(QStringList() << " insert " << " insert_or_assing " << " erase " << " size " << " max_size " << " empty " << " find " << " contains " << " rehash " << " reserve " << " clear " << " begin " << " back ");
+    ui->comboBox_Umap->addItems(QStringList() << " insert " << " insert_or_assing " << " erase " << " size " << " max_size " << " empty " << " find " << " contains " << " clear " << " rehash " << " reserve "  << " begin " << " back ");
 
     ui->spinBox_Umap->setAlignment(Qt::AlignCenter);
 }

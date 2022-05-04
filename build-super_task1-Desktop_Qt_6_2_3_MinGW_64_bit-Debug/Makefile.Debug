@@ -73,7 +73,10 @@ DIST          =  ..\super_task1\MapSource.h \
 		..\super_task1\Unordered_mapSource.h \
 		..\super_task1\mainwindow.h \
 		..\super_task1\map.h \
+		..\super_task1\pair.h \
+		..\super_task1\queue.h \
 		..\super_task1\set.h \
+		..\super_task1\stack.h \
 		..\super_task1\unordered_map.h ..\super_task1\main.cpp \
 		..\super_task1\mainwindow.cpp \
 		..\super_task1\map.cpp \
@@ -98,7 +101,7 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) super_task1.zip $(SOURCES) $(DIST) ..\super_task1\super_task1.pro D:\ide\6.2.3\mingw_64\mkspecs\features\spec_pre.prf D:\ide\6.2.3\mingw_64\mkspecs\features\device_config.prf D:\ide\6.2.3\mingw_64\mkspecs\common\sanitize.conf D:\ide\6.2.3\mingw_64\mkspecs\common\gcc-base.conf D:\ide\6.2.3\mingw_64\mkspecs\common\g++-base.conf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\ide\6.2.3\mingw_64\mkspecs\common\windows-vulkan.conf D:\ide\6.2.3\mingw_64\mkspecs\common\g++-win32.conf D:\ide\6.2.3\mingw_64\mkspecs\common\windows-desktop.conf D:\ide\6.2.3\mingw_64\mkspecs\qconfig.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_ext_freetype.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_ext_libpng.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_concurrent.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_core.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_core_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_dbus.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_designer.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_designer_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_gui.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_gui_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_help.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_help_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssettings.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_linguist.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_linguist_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_network.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_network_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_opengl.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_printsupport.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qml.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qml_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmltest.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quick.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quick_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_sql.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_sql_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svg.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svg_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_testlib.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_tools_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_uitools.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_widgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_xml.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_xml_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri D:\ide\6.2.3\mingw_64\mkspecs\features\qt_functions.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qt_config.prf D:\ide\6.2.3\mingw_64\mkspecs\win32-g++\qmake.conf D:\ide\6.2.3\mingw_64\mkspecs\features\spec_post.prf .qmake.stash D:\ide\6.2.3\mingw_64\mkspecs\features\exclusive_builds.prf D:\ide\6.2.3\mingw_64\mkspecs\features\toolchain.prf D:\ide\6.2.3\mingw_64\mkspecs\features\default_pre.prf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\default_pre.prf D:\ide\6.2.3\mingw_64\mkspecs\features\resolve_config.prf D:\ide\6.2.3\mingw_64\mkspecs\features\exclusive_builds_post.prf D:\ide\6.2.3\mingw_64\mkspecs\features\default_post.prf D:\ide\6.2.3\mingw_64\mkspecs\features\build_pass.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qml_debug.prf D:\ide\6.2.3\mingw_64\mkspecs\features\entrypoint.prf D:\ide\6.2.3\mingw_64\mkspecs\features\precompile_header.prf D:\ide\6.2.3\mingw_64\mkspecs\features\warn_on.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qt.prf D:\ide\6.2.3\mingw_64\mkspecs\features\resources_functions.prf D:\ide\6.2.3\mingw_64\mkspecs\features\resources.prf D:\ide\6.2.3\mingw_64\mkspecs\features\moc.prf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\opengl.prf D:\ide\6.2.3\mingw_64\mkspecs\features\uic.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qmake_use.prf D:\ide\6.2.3\mingw_64\mkspecs\features\file_copies.prf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\windows.prf D:\ide\6.2.3\mingw_64\mkspecs\features\testcase_targets.prf D:\ide\6.2.3\mingw_64\mkspecs\features\exceptions.prf D:\ide\6.2.3\mingw_64\mkspecs\features\yacc.prf D:\ide\6.2.3\mingw_64\mkspecs\features\lex.prf ..\super_task1\super_task1.pro D:\ide\6.2.3\mingw_64\lib\Qt6Widgets.prl D:\ide\6.2.3\mingw_64\lib\Qt6Gui.prl D:\ide\6.2.3\mingw_64\lib\Qt6Core.prl D:\ide\6.2.3\mingw_64\lib\Qt6EntryPoint.prl    D:\ide\6.2.3\mingw_64\mkspecs\features\data\dummy.cpp ..\super_task1\MapSource.h ..\super_task1\SetSource.h ..\super_task1\Unordered_mapSource.h ..\super_task1\mainwindow.h ..\super_task1\map.h ..\super_task1\set.h ..\super_task1\unordered_map.h  ..\super_task1\main.cpp ..\super_task1\mainwindow.cpp ..\super_task1\map.cpp ..\super_task1\set.cpp ..\super_task1\unordered_map.cpp ..\super_task1\mainwindow.ui ..\super_task1\map.ui ..\super_task1\set.ui ..\super_task1\unordered_map.ui    
+	$(ZIP) super_task1.zip $(SOURCES) $(DIST) ..\super_task1\super_task1.pro D:\ide\6.2.3\mingw_64\mkspecs\features\spec_pre.prf D:\ide\6.2.3\mingw_64\mkspecs\features\device_config.prf D:\ide\6.2.3\mingw_64\mkspecs\common\sanitize.conf D:\ide\6.2.3\mingw_64\mkspecs\common\gcc-base.conf D:\ide\6.2.3\mingw_64\mkspecs\common\g++-base.conf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\ide\6.2.3\mingw_64\mkspecs\common\windows-vulkan.conf D:\ide\6.2.3\mingw_64\mkspecs\common\g++-win32.conf D:\ide\6.2.3\mingw_64\mkspecs\common\windows-desktop.conf D:\ide\6.2.3\mingw_64\mkspecs\qconfig.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_ext_freetype.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_ext_libpng.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_concurrent.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_core.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_core_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_dbus.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_designer.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_designer_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_gui.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_gui_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_help.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_help_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssettings.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_linguist.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_linguist_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_network.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_network_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_opengl.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_printsupport.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qml.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qml_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmltest.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quick.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quick_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_sql.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_sql_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svg.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svg_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_testlib.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_tools_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_uitools.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_widgets.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_xml.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_xml_private.pri D:\ide\6.2.3\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri D:\ide\6.2.3\mingw_64\mkspecs\features\qt_functions.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qt_config.prf D:\ide\6.2.3\mingw_64\mkspecs\win32-g++\qmake.conf D:\ide\6.2.3\mingw_64\mkspecs\features\spec_post.prf .qmake.stash D:\ide\6.2.3\mingw_64\mkspecs\features\exclusive_builds.prf D:\ide\6.2.3\mingw_64\mkspecs\features\toolchain.prf D:\ide\6.2.3\mingw_64\mkspecs\features\default_pre.prf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\default_pre.prf D:\ide\6.2.3\mingw_64\mkspecs\features\resolve_config.prf D:\ide\6.2.3\mingw_64\mkspecs\features\exclusive_builds_post.prf D:\ide\6.2.3\mingw_64\mkspecs\features\default_post.prf D:\ide\6.2.3\mingw_64\mkspecs\features\build_pass.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qml_debug.prf D:\ide\6.2.3\mingw_64\mkspecs\features\entrypoint.prf D:\ide\6.2.3\mingw_64\mkspecs\features\precompile_header.prf D:\ide\6.2.3\mingw_64\mkspecs\features\warn_on.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qt.prf D:\ide\6.2.3\mingw_64\mkspecs\features\resources_functions.prf D:\ide\6.2.3\mingw_64\mkspecs\features\resources.prf D:\ide\6.2.3\mingw_64\mkspecs\features\moc.prf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\opengl.prf D:\ide\6.2.3\mingw_64\mkspecs\features\uic.prf D:\ide\6.2.3\mingw_64\mkspecs\features\qmake_use.prf D:\ide\6.2.3\mingw_64\mkspecs\features\file_copies.prf D:\ide\6.2.3\mingw_64\mkspecs\features\win32\windows.prf D:\ide\6.2.3\mingw_64\mkspecs\features\testcase_targets.prf D:\ide\6.2.3\mingw_64\mkspecs\features\exceptions.prf D:\ide\6.2.3\mingw_64\mkspecs\features\yacc.prf D:\ide\6.2.3\mingw_64\mkspecs\features\lex.prf ..\super_task1\super_task1.pro D:\ide\6.2.3\mingw_64\lib\Qt6Widgets.prl D:\ide\6.2.3\mingw_64\lib\Qt6Gui.prl D:\ide\6.2.3\mingw_64\lib\Qt6Core.prl D:\ide\6.2.3\mingw_64\lib\Qt6EntryPoint.prl    D:\ide\6.2.3\mingw_64\mkspecs\features\data\dummy.cpp ..\super_task1\MapSource.h ..\super_task1\SetSource.h ..\super_task1\Unordered_mapSource.h ..\super_task1\mainwindow.h ..\super_task1\map.h ..\super_task1\pair.h ..\super_task1\queue.h ..\super_task1\set.h ..\super_task1\stack.h ..\super_task1\unordered_map.h  ..\super_task1\main.cpp ..\super_task1\mainwindow.cpp ..\super_task1\map.cpp ..\super_task1\set.cpp ..\super_task1\unordered_map.cpp ..\super_task1\mainwindow.ui ..\super_task1\map.ui ..\super_task1\set.ui ..\super_task1\unordered_map.ui    
 
 clean: compiler_clean 
 	-$(DEL_FILE) debug\main.o debug\mainwindow.o debug\map.o debug\set.o debug\unordered_map.o debug\moc_mainwindow.o debug\moc_map.o debug\moc_set.o debug\moc_unordered_map.o
@@ -260,8 +263,14 @@ debug/moc_mainwindow.cpp: ../super_task1/mainwindow.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
 		../super_task1/set.h \
+		../super_task1/SetSource.h \
+		../super_task1/queue.h \
+		../super_task1/stack.h \
 		../super_task1/map.h \
+		../super_task1/MapSource.h \
+		../super_task1/pair.h \
 		../super_task1/unordered_map.h \
+		../super_task1/Unordered_mapSource.h \
 		debug/moc_predefs.h \
 		D:/ide/6.2.3/mingw_64/bin/moc.exe
 	D:\ide\6.2.3\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/pasha/source/laby/LABA$7/build-super_task1-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/ide/6.2.3/mingw_64/mkspecs/win32-g++ -IC:/Users/pasha/source/laby/LABA$7/super_task1 -ID:/ide/6.2.3/mingw_64/include -ID:/ide/6.2.3/mingw_64/include/QtWidgets -ID:/ide/6.2.3/mingw_64/include/QtGui -ID:/ide/6.2.3/mingw_64/include/QtCore -I. -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/ide/Tools/mingw900_64/x86_64-w64-mingw32/include ..\super_task1\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -396,6 +405,10 @@ debug/moc_map.cpp: ../super_task1/map.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
+		../super_task1/MapSource.h \
+		../super_task1/queue.h \
+		../super_task1/stack.h \
+		../super_task1/pair.h \
 		debug/moc_predefs.h \
 		D:/ide/6.2.3/mingw_64/bin/moc.exe
 	D:\ide\6.2.3\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/pasha/source/laby/LABA$7/build-super_task1-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/ide/6.2.3/mingw_64/mkspecs/win32-g++ -IC:/Users/pasha/source/laby/LABA$7/super_task1 -ID:/ide/6.2.3/mingw_64/include -ID:/ide/6.2.3/mingw_64/include/QtWidgets -ID:/ide/6.2.3/mingw_64/include/QtGui -ID:/ide/6.2.3/mingw_64/include/QtCore -I. -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/ide/Tools/mingw900_64/x86_64-w64-mingw32/include ..\super_task1\map.h -o debug\moc_map.cpp
@@ -530,6 +543,9 @@ debug/moc_set.cpp: ../super_task1/set.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
+		../super_task1/SetSource.h \
+		../super_task1/queue.h \
+		../super_task1/stack.h \
 		debug/moc_predefs.h \
 		D:/ide/6.2.3/mingw_64/bin/moc.exe
 	D:\ide\6.2.3\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/pasha/source/laby/LABA$7/build-super_task1-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/ide/6.2.3/mingw_64/mkspecs/win32-g++ -IC:/Users/pasha/source/laby/LABA$7/super_task1 -ID:/ide/6.2.3/mingw_64/include -ID:/ide/6.2.3/mingw_64/include/QtWidgets -ID:/ide/6.2.3/mingw_64/include/QtGui -ID:/ide/6.2.3/mingw_64/include/QtCore -I. -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/ide/Tools/mingw900_64/x86_64-w64-mingw32/include ..\super_task1\set.h -o debug\moc_set.cpp
@@ -664,6 +680,8 @@ debug/moc_unordered_map.cpp: ../super_task1/unordered_map.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
+		../super_task1/Unordered_mapSource.h \
+		../super_task1/pair.h \
 		debug/moc_predefs.h \
 		D:/ide/6.2.3/mingw_64/bin/moc.exe
 	D:\ide\6.2.3\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/pasha/source/laby/LABA$7/build-super_task1-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/ide/6.2.3/mingw_64/mkspecs/win32-g++ -IC:/Users/pasha/source/laby/LABA$7/super_task1 -ID:/ide/6.2.3/mingw_64/include -ID:/ide/6.2.3/mingw_64/include/QtWidgets -ID:/ide/6.2.3/mingw_64/include/QtGui -ID:/ide/6.2.3/mingw_64/include/QtCore -I. -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/ide/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/ide/Tools/mingw900_64/x86_64-w64-mingw32/include ..\super_task1\unordered_map.h -o debug\moc_unordered_map.cpp
@@ -834,8 +852,14 @@ debug/main.o: ../super_task1/main.cpp ../super_task1/mainwindow.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
 		../super_task1/set.h \
+		../super_task1/SetSource.h \
+		../super_task1/queue.h \
+		../super_task1/stack.h \
 		../super_task1/map.h \
+		../super_task1/MapSource.h \
+		../super_task1/pair.h \
 		../super_task1/unordered_map.h \
+		../super_task1/Unordered_mapSource.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QApplication \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qapplication.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qcoreapplication.h \
@@ -989,8 +1013,14 @@ debug/mainwindow.o: ../super_task1/mainwindow.cpp ../super_task1/mainwindow.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
 		../super_task1/set.h \
+		../super_task1/SetSource.h \
+		../super_task1/queue.h \
+		../super_task1/stack.h \
 		../super_task1/map.h \
+		../super_task1/MapSource.h \
+		../super_task1/pair.h \
 		../super_task1/unordered_map.h \
+		../super_task1/Unordered_mapSource.h \
 		ui_mainwindow.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/QVariant \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QApplication \
@@ -1162,6 +1192,10 @@ debug/map.o: ../super_task1/map.cpp ../super_task1/map.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
+		../super_task1/MapSource.h \
+		../super_task1/queue.h \
+		../super_task1/stack.h \
+		../super_task1/pair.h \
 		ui_map.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/QVariant \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QApplication \
@@ -1184,6 +1218,20 @@ debug/map.o: ../super_task1/map.cpp ../super_task1/map.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qinputmethod.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qlocale.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qguiapplication_platform.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QComboBox \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qcombobox.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qstyleoption.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qvalidator.h \
+		D:/ide/6.2.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qslider.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractslider.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qstyle.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabbar.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qrubberband.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qframe.h \
+		D:/ide/6.2.3/mingw_64/include/QtCore/qabstractitemmodel.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qpainter.h \
@@ -1191,11 +1239,22 @@ debug/map.o: ../super_task1/map.cpp ../super_task1/map.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qpen.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		D:/ide/6.2.3/mingw_64/include/QtWidgets/qframe.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QLabel \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qlabel.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qpicture.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextdocument.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qlineedit.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextcursor.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextformat.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QPushButton \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qpushbutton.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QSpinBox \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qspinbox.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QTextEdit \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtextedit.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\map.o ..\super_task1\map.cpp
 
@@ -1329,6 +1388,9 @@ debug/set.o: ../super_task1/set.cpp ../super_task1/set.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
+		../super_task1/SetSource.h \
+		../super_task1/queue.h \
+		../super_task1/stack.h \
 		ui_set.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/QVariant \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QApplication \
@@ -1351,6 +1413,20 @@ debug/set.o: ../super_task1/set.cpp ../super_task1/set.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qinputmethod.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qlocale.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qguiapplication_platform.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QComboBox \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qcombobox.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qstyleoption.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qvalidator.h \
+		D:/ide/6.2.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qslider.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractslider.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qstyle.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabbar.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qrubberband.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qframe.h \
+		D:/ide/6.2.3/mingw_64/include/QtCore/qabstractitemmodel.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qpainter.h \
@@ -1358,11 +1434,20 @@ debug/set.o: ../super_task1/set.cpp ../super_task1/set.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qpen.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		D:/ide/6.2.3/mingw_64/include/QtWidgets/qframe.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QLabel \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qlabel.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qpicture.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextdocument.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QPushButton \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qpushbutton.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QSpinBox \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qspinbox.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QTextEdit \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtextedit.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextcursor.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextformat.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\set.o ..\super_task1\set.cpp
 
@@ -1496,6 +1581,8 @@ debug/unordered_map.o: ../super_task1/unordered_map.cpp ../super_task1/unordered
 		D:/ide/6.2.3/mingw_64/include/QtCore/qnativeinterface.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qicon.h \
+		../super_task1/Unordered_mapSource.h \
+		../super_task1/pair.h \
 		ui_unordered_map.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/QVariant \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QApplication \
@@ -1518,6 +1605,20 @@ debug/unordered_map.o: ../super_task1/unordered_map.cpp ../super_task1/unordered
 		D:/ide/6.2.3/mingw_64/include/QtGui/qinputmethod.h \
 		D:/ide/6.2.3/mingw_64/include/QtCore/qlocale.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qguiapplication_platform.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QComboBox \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qcombobox.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qstyleoption.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qvalidator.h \
+		D:/ide/6.2.3/mingw_64/include/QtCore/qregularexpression.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qslider.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractslider.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qstyle.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qtabbar.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qrubberband.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qframe.h \
+		D:/ide/6.2.3/mingw_64/include/QtCore/qabstractitemmodel.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QGraphicsView \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qgraphicsview.h \
 		D:/ide/6.2.3/mingw_64/include/QtGui/qpainter.h \
@@ -1525,11 +1626,20 @@ debug/unordered_map.o: ../super_task1/unordered_map.cpp ../super_task1/unordered
 		D:/ide/6.2.3/mingw_64/include/QtGui/qpen.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qscrollarea.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		D:/ide/6.2.3/mingw_64/include/QtWidgets/qframe.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QLabel \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qlabel.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qpicture.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextdocument.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QLineEdit \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qlineedit.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextcursor.h \
+		D:/ide/6.2.3/mingw_64/include/QtGui/qtextformat.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QPushButton \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qpushbutton.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/qabstractbutton.h \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/QSpinBox \
+		D:/ide/6.2.3/mingw_64/include/QtWidgets/qspinbox.h \
 		D:/ide/6.2.3/mingw_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\unordered_map.o ..\super_task1\unordered_map.cpp
 

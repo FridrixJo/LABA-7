@@ -17,6 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -32,6 +33,8 @@ public:
     QPushButton *do_set;
     QLabel *label_2;
     QSpinBox *spinBox_set;
+    QTextEdit *MainSet;
+    QTextEdit *InfoSet;
 
     void setupUi(QMainWindow *Set)
     {
@@ -68,16 +71,22 @@ public:
 "color:rgb(0, 0, 255);"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(230, 150, 71, 41));
+        label_2->setGeometry(QRect(400, 90, 71, 31));
         label_2->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
 "color:rgb(255, 255, 255)"));
         spinBox_set = new QSpinBox(centralwidget);
         spinBox_set->setObjectName(QString::fromUtf8("spinBox_set"));
-        spinBox_set->setGeometry(QRect(310, 150, 71, 41));
+        spinBox_set->setGeometry(QRect(490, 90, 71, 31));
         spinBox_set->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
 "background-color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"System\";\n"
 "color: rgb(0, 0, 255)"));
+        MainSet = new QTextEdit(centralwidget);
+        MainSet->setObjectName(QString::fromUtf8("MainSet"));
+        MainSet->setGeometry(QRect(50, 210, 281, 200));
+        InfoSet = new QTextEdit(centralwidget);
+        InfoSet->setObjectName(QString::fromUtf8("InfoSet"));
+        InfoSet->setGeometry(QRect(420, 210, 171, 201));
         Set->setCentralWidget(centralwidget);
 
         retranslateUi(Set);

@@ -18,6 +18,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,6 +36,11 @@ public:
     QLabel *label_3;
     QSpinBox *spinBox_map;
     QLineEdit *lineEdit_map;
+    QTextEdit *MainSet;
+    QTextEdit *MainSetValue;
+    QTextEdit *InfoSet;
+    QLabel *label_4;
+    QLabel *label_5;
 
     void setupUi(QMainWindow *Map)
     {
@@ -71,28 +77,47 @@ public:
 "color:rgb(0, 0, 255);"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(230, 140, 171, 41));
+        label_2->setGeometry(QRect(380, 80, 81, 51));
         label_2->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
 "color:rgb(255, 255, 255)"));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(230, 200, 171, 41));
+        label_3->setGeometry(QRect(380, 130, 171, 41));
         label_3->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
 "color:rgb(255, 255, 255)"));
         spinBox_map = new QSpinBox(centralwidget);
         spinBox_map->setObjectName(QString::fromUtf8("spinBox_map"));
-        spinBox_map->setGeometry(QRect(310, 200, 71, 41));
+        spinBox_map->setGeometry(QRect(460, 130, 71, 31));
         spinBox_map->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
 "background-color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"System\";\n"
 "color: rgb(0, 0, 255)"));
         lineEdit_map = new QLineEdit(centralwidget);
         lineEdit_map->setObjectName(QString::fromUtf8("lineEdit_map"));
-        lineEdit_map->setGeometry(QRect(310, 140, 141, 41));
+        lineEdit_map->setGeometry(QRect(460, 90, 141, 31));
         lineEdit_map->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
 "background-color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"System\";\n"
 "color: rgb(0, 0, 255)"));
+        MainSet = new QTextEdit(centralwidget);
+        MainSet->setObjectName(QString::fromUtf8("MainSet"));
+        MainSet->setGeometry(QRect(30, 200, 260, 190));
+        MainSetValue = new QTextEdit(centralwidget);
+        MainSetValue->setObjectName(QString::fromUtf8("MainSetValue"));
+        MainSetValue->setGeometry(QRect(340, 200, 260, 190));
+        InfoSet = new QTextEdit(centralwidget);
+        InfoSet->setObjectName(QString::fromUtf8("InfoSet"));
+        InfoSet->setGeometry(QRect(200, 403, 231, 61));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(130, 160, 81, 51));
+        label_4->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
+"color:rgb(255, 255, 255)"));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(440, 160, 81, 51));
+        label_5->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
+"color:rgb(255, 255, 255)"));
         Map->setCentralWidget(centralwidget);
 
         retranslateUi(Map);
@@ -108,6 +133,8 @@ public:
         do_map->setText(QCoreApplication::translate("Map", "do", nullptr));
         label_2->setText(QCoreApplication::translate("Map", "Key :", nullptr));
         label_3->setText(QCoreApplication::translate("Map", "Data :", nullptr));
+        label_4->setText(QCoreApplication::translate("Map", "Keys :", nullptr));
+        label_5->setText(QCoreApplication::translate("Map", "Data:", nullptr));
     } // retranslateUi
 
 };

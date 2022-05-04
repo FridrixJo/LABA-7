@@ -71,26 +71,26 @@ public:
 "color:rgb(0, 0, 255);"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(230, 150, 171, 41));
+        label_2->setGeometry(QRect(380, 80, 51, 51));
         label_2->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
 "color:rgb(255, 255, 255)"));
         lineEdit_Umap = new QLineEdit(centralwidget);
         lineEdit_Umap->setObjectName(QString::fromUtf8("lineEdit_Umap"));
-        lineEdit_Umap->setGeometry(QRect(310, 150, 141, 41));
+        lineEdit_Umap->setGeometry(QRect(460, 90, 141, 31));
         lineEdit_Umap->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
 "background-color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"System\";\n"
 "color: rgb(0, 0, 255)"));
         spinBox_Umap = new QSpinBox(centralwidget);
         spinBox_Umap->setObjectName(QString::fromUtf8("spinBox_Umap"));
-        spinBox_Umap->setGeometry(QRect(310, 220, 71, 41));
+        spinBox_Umap->setGeometry(QRect(460, 130, 71, 31));
         spinBox_Umap->setStyleSheet(QString::fromUtf8("border-radius:5px;\n"
 "background-color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"System\";\n"
 "color: rgb(0, 0, 255)"));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(230, 220, 171, 41));
+        label_3->setGeometry(QRect(380, 120, 91, 51));
         label_3->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
 "color:rgb(255, 255, 255)"));
         Unordered_map->setCentralWidget(centralwidget);

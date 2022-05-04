@@ -3,39 +3,31 @@
 #include <string>
 #include "../../LABA$4/pair/pair.h"
 
-int HashFunctionHorner(const std::string& s, int table_size, const int key)
-{
-    int hash_result = 0;
-    for (int i = 0; i < s.size(); i++)
-    {
-        hash_result = (key * hash_result + s[i]) % table_size;
-    }
-    hash_result = (hash_result * 2 + 1) % table_size;
-    return hash_result;
-}
-
-struct HashFunction1
-{
-    int operator()(const std::string& s, int table_size) const
-    {
-        return HashFunctionHorner(s, table_size, table_size - 1);
-    }
-};
-
-struct HashFunction2
-{
-    int operator()(const std::string& s, int table_size) const
-    {
-        return HashFunctionHorner(s, table_size, table_size + 1);
-    }
-};
-
-template <class KeyType, class ValueType, class THash1 = HashFunction1, class THash2 = HashFunction2>
+template <class KeyType, class ValueType>
 class unordered_map
 {
 private:
     const int default_size = 8;
     const double rehash_size = 0.5;
+
+    int HashFunctionHorner(const std::string& s, const int& table_size, const int& key)
+    {
+        int hash_result = 0;
+        for (int i = 0; i < s.size(); i++)
+        {
+            hash_result = (key * hash_result + s[i]) % table_size;
+        }
+        hash_result = (hash_result * 2 + 1) % table_size;
+        return hash_result;
+    }
+
+    int hash1(const std::string& s, const int& table_size) {
+        return HashFunctionHorner(s, table_size, table_size - 1);
+    }
+
+    int hash2(const std::string& s, const int& table_size) {
+        return HashFunctionHorner(s, table_size, table_size + 1);
+    }
 
     class Node {
     public:
@@ -119,7 +111,7 @@ public:
         delete[] arr2;
     }
 
-    bool insert(const pair<std::string,int>& pair, const THash1& hash1 = THash1(), const THash2& hash2 = THash2())
+    bool insert(const pair<std::string,int>& pair)
     {
         if (m_size + 1 > int(rehash_size * buffer_size))
             reserve();
@@ -152,7 +144,7 @@ public:
         return true;
     }
 
-    bool insert_or_assign(const pair<std::string, int>& pair, const THash1& hash1 = THash1(), const THash2& hash2 = THash2())
+    bool insert_or_assign(const pair<std::string, int>& pair)
     {
         if (contains(pair.first)) {
             int h1 = hash1(pair.first, buffer_size);
@@ -175,7 +167,7 @@ public:
     }
 
 
-    bool erase(const KeyType& key, const THash1& hash1 = THash1(), const THash2& hash2 = THash2())
+    bool erase(const KeyType& key)
     {
         if (contains(key)) {
             int h1 = hash1(key, buffer_size);
@@ -198,7 +190,7 @@ public:
             return false;
     }
 
-    bool contains(const KeyType& key, const THash1& hash1 = THash1(), const THash2& hash2 = THash2())
+    bool contains(const KeyType& key)
     {
         int h1 = hash1(key, buffer_size);
         int h2 = hash2(key, buffer_size);

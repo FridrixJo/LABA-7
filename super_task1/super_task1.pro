@@ -21,7 +21,10 @@ HEADERS += \
     Unordered_mapSource.h \
     mainwindow.h \
     map.h \
+    pair.h \
+    queue.h \
     set.h \
+    stack.h \
     unordered_map.h
 
 FORMS += \

@@ -2,10 +2,11 @@
 #define SETSOURCE_H
 
 #include <iostream>
-#include "../../LABA$5/queue/queue/queue.h"
+#include "queue.h"
 #include <vector>
-#include "../../LABA$3/stack/stack/stack.h"
-#include "../../LABA$3/double_list/double_list/doube_list.h"
+#include "stack.h"
+#include <QString>
+#include <QDebug>
 
 template <typename KeyType>
 class set {
@@ -23,6 +24,7 @@ public:
 
     Node* root = nullptr;
     size_t m_size = 0;
+    QString S;
 
 private:
 
@@ -278,6 +280,8 @@ private:
         }
     }
 
+public:
+
     void printTree(Node* root, int space = 0) {
         if (!root)
             return;
@@ -285,9 +289,10 @@ private:
         space += COUNT;
         printTree(root->right, space);
         for (int i = COUNT; i < space; i++) {
-            std::cout << "  ";
+            S.push_back("  ");
         }
-        std::cout << root->key << "\n";
+        QString s;
+        S.push_back(s.setNum(root->key) + '\n');
         printTree(root->left, space);
     }
 
@@ -296,14 +301,16 @@ private:
             return false;
         }
 
-        if (key < node->pair.first)
+        if (key < node->key)
             findElement(node->left, key);
-        else if (key > node->pair.first)
+        else if (key > node->key)
             findElement(node->right, key);
         else {
             return true;
         }
     }
+
+private:
 
     Node* firstNode(Node* node) {
         while (node->left)
@@ -346,7 +353,9 @@ public:
     }
 
     void print() {
+        S = "";
         printTree(root);
+        qDebug() << S;
     }
 
     void output() {
@@ -458,7 +467,7 @@ public:
             return node;
         }
 
-        int& operator*() {
+        KeyType& operator*() {
             return node->key;
         }
 
@@ -474,7 +483,7 @@ public:
         if (contains(key)) {
             auto it = set<KeyType>::BSTIterator(this->begin());
             for (it; it != this->back(); it++) {
-                if ((*it).first == key)
+                if (*it == key)
                     return it;
             }
         }
@@ -488,6 +497,7 @@ public:
             if (*it >= key)
                 return it;
         }
+        return nullptr;
     }
 
     BSTIterator upper_bound(const KeyType& key) {
@@ -495,6 +505,7 @@ public:
             if (*it > key)
                 return it;
         }
+        return nullptr;
     }
 
     Node* begin() {

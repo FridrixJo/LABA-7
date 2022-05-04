@@ -3,11 +3,9 @@
 #include "set.h"
 
 int main(){
-	set<std::string> a;
-	a.insert("ifjir");
-	a.insert("a");
-	a.insert("b");
-	a.print();
-	a.clear();
-	std::cout << a.size();
+	set<int> a;
+	a.insert(1);
+	a.insert(2);
+	a.insert(3);
+	auto it = a.upper_bound(3);
 }
