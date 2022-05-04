@@ -23,11 +23,12 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *set;
+    QPushButton *map;
+    QPushButton *unordered_map;
     QGraphicsView *graphicsView;
     QLabel *label;
+    QPushButton *pushButton_4;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -36,24 +37,24 @@ public:
         MainWindow->resize(600, 400);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(205, 110, 190, 45));
-        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+        set = new QPushButton(centralwidget);
+        set->setObjectName(QString::fromUtf8("set"));
+        set->setGeometry(QRect(205, 110, 190, 45));
+        set->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius:7px;\n"
 "font: 700 20pt \"System\";\n"
 "color:rgb(0, 0, 255);"));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(205, 170, 190, 45));
-        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+        map = new QPushButton(centralwidget);
+        map->setObjectName(QString::fromUtf8("map"));
+        map->setGeometry(QRect(205, 170, 190, 45));
+        map->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius:7px;\n"
 "font: 700 20pt \"System\";\n"
 "color:rgb(0, 0, 255);"));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(205, 230, 190, 45));
-        pushButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+        unordered_map = new QPushButton(centralwidget);
+        unordered_map->setObjectName(QString::fromUtf8("unordered_map"));
+        unordered_map->setGeometry(QRect(205, 230, 190, 45));
+        unordered_map->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "border-radius:7px;\n"
 "font: 700 20pt \"System\";\n"
 "color:rgb(0, 0, 255);"));
@@ -66,12 +67,20 @@ public:
         label->setGeometry(QRect(220, 40, 191, 51));
         label->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
 "color:rgb(255, 255, 255);"));
+        pushButton_4 = new QPushButton(centralwidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(500, 340, 81, 41));
+        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"border-radius:7px;\n"
+"font: 700 20pt \"System\";\n"
+"color:rgb(255, 0, 0)"));
         MainWindow->setCentralWidget(centralwidget);
         graphicsView->raise();
-        pushButton->raise();
-        pushButton_2->raise();
-        pushButton_3->raise();
+        set->raise();
+        map->raise();
+        unordered_map->raise();
         label->raise();
+        pushButton_4->raise();
 
         retranslateUi(MainWindow);
 
@@ -81,10 +90,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "set", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "map", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "unordered_map", nullptr));
+        set->setText(QCoreApplication::translate("MainWindow", "set", nullptr));
+        map->setText(QCoreApplication::translate("MainWindow", "map", nullptr));
+        unordered_map->setText(QCoreApplication::translate("MainWindow", "unordered_map", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Choose a container", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "exit", nullptr));
     } // retranslateUi
 
 };

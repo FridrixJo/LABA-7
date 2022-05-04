@@ -10,13 +10,25 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    map.cpp \
+    set.cpp \
+    unordered_map.cpp
 
 HEADERS += \
-    mainwindow.h
+    MapSource.h \
+    SetSource.h \
+    Unordered_mapSource.h \
+    mainwindow.h \
+    map.h \
+    set.h \
+    unordered_map.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    map.ui \
+    set.ui \
+    unordered_map.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
