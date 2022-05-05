@@ -13,11 +13,14 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,6 +38,8 @@ public:
     QLineEdit *lineEdit_Umap;
     QSpinBox *spinBox_Umap;
     QLabel *label_3;
+    QTableWidget *tableWidget;
+    QTextEdit *InfoSet;
 
     void setupUi(QMainWindow *Unordered_map)
     {
@@ -93,6 +98,12 @@ public:
         label_3->setGeometry(QRect(380, 120, 91, 51));
         label_3->setStyleSheet(QString::fromUtf8("font: 700 20pt \"System\";\n"
 "color:rgb(255, 255, 255)"));
+        tableWidget = new QTableWidget(centralwidget);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setGeometry(QRect(120, 200, 400, 200));
+        InfoSet = new QTextEdit(centralwidget);
+        InfoSet->setObjectName(QString::fromUtf8("InfoSet"));
+        InfoSet->setGeometry(QRect(200, 415, 231, 50));
         Unordered_map->setCentralWidget(centralwidget);
 
         retranslateUi(Unordered_map);

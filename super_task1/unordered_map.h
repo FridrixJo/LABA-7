@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "Unordered_mapSource.h"
+#include <QMessageBox>
 
 namespace Ui {
 class Unordered_map;
@@ -29,17 +30,21 @@ private:
     void findUMap();
     void containsUMap();
     void clearUMap();
-    void reheshUMap();
+    void rehashUMap();
     void reserveUMap();
     void beginUMap();
     void backUMap();
 
+    void print();
+
 private slots:
     void on_back_Umap_clicked();
 
+    void on_do_Umap_clicked();
+
 private:
     Ui::Unordered_map *ui;
-    unordered_map<std::string,int> Umap;
+    unordered_map<std::string,int> m_Umap;
 };
 
 #endif // UNORDERED_MAP_H

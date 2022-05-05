@@ -34,14 +34,16 @@ private:
     public:
         pair<std::string, int> pair;
         bool state;
+        int hash;
 
         Node() = default;
         ~Node() = default;
 
     };
 
-    Node* newNode(const pair<std::string,int>& pair) {
+    Node* newNode(const pair<std::string,int>& pair, int hash) {
         Node* node = new Node();
+        node->hash = hash;
         node->pair = pair;
         node->state = true;
         return node;
@@ -133,7 +135,7 @@ public:
         }
         if (first_deleted == -1)
         {
-            arr[h1] = newNode(pair);
+            arr[h1] = newNode(pair,h1);
             ++size_all_non_nullptr;
         }
         else
@@ -246,6 +248,10 @@ public:
             return (*cur)->pair;
         }
 
+        const int& getHash() {
+            return (*cur)->hash;
+        }
+
         bool operator!=(const Iterator& other) { return cur != other.cur; }
         bool operator==(const Iterator& other) { return cur == other.cur; }
     };
@@ -257,6 +263,8 @@ public:
                 if ((*it).first == key)
                     return it;
             }
+            if ((*it).first == key)
+                return it;
         }
         else {
             return nullptr;

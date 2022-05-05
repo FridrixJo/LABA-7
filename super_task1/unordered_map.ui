@@ -158,6 +158,26 @@ color:rgb(255, 255, 255)</string>
      <string>Data :</string>
     </property>
    </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>200</y>
+      <width>400</width>
+      <height>200</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="InfoSet">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>415</y>
+      <width>231</width>
+      <height>50</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

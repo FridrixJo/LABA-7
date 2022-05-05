@@ -330,7 +330,9 @@ public:
         this->m_size = 0;
     }
 
-    ~set() = default;
+    ~set() {
+        clear();
+    }
 
     void insert(const KeyType& key) {
         root = insert(nullptr, root, key);
@@ -436,7 +438,7 @@ public:
                     node = node->left;
             }
             else {
-                if (node->key < node->parent->key)
+                if (node->parent && node->key < node->parent->key)
                     node = node->parent;
                 else {
                     while (node->parent && node->key > node->parent->key) {
@@ -455,7 +457,7 @@ public:
                     node = node->right;
             }
             else {
-                if (node->key > node->parent->key)
+                if (node->parent && node->key > node->parent->key)
                     node = node->parent;
                 else {
                     while (node->key < node->parent->key) {

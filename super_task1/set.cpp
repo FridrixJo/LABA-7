@@ -77,7 +77,7 @@ void Set::findSet()
          auto it = set<int>::BSTIterator(m_set.find(key));
          QString s;
          ui->InfoSet->setAlignment(Qt::AlignCenter);
-         ui->InfoSet->setText("The key " + s.setNum(*it) + " exists");
+         ui->InfoSet->setText("The key " + s.setNum(key) + " exists");
     } else {
         QMessageBox m;
         m.warning(this,"Error","There is no sush key in set.\nChoose another key");

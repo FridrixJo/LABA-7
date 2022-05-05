@@ -355,7 +355,9 @@ public:
         this->m_size = 0;
     }
 
-    ~map() = default;
+    ~map(){
+        clear();
+    }
 
     void insert(pair<KeyType,ValueType> pair) {
         root = insert(nullptr, root, pair);
@@ -467,7 +469,7 @@ public:
                     node = node->left;
             }
             else {
-                if (node->pair.first < node->parent->pair.first)
+                if (node->parent && node->pair.first < node->parent->pair.first)
                     node = node->parent;
                 else {
                     while (node->parent && node->pair.first > node->parent->pair.first) {
@@ -486,7 +488,7 @@ public:
                     node = node->right;
             }
             else {
-                if (node->pair.first > node->parent->pair.first)
+                if (node->parent && node->pair.first > node->parent->pair.first)
                     node = node->parent;
                 else {
                     while (node->pair.first < node->parent->pair.first) {

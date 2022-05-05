@@ -58,7 +58,7 @@ void Map::eraseMap()
 {
     if(!m_map.size()){
         QMessageBox m;
-        m.warning(this,"Error","Set is empty.\nAdd elements");
+        m.warning(this,"Error","UMap is empty.\nAdd elements");
         return;
     }
     QString key = ui->lineEdit_map->text();
@@ -136,7 +136,7 @@ void Map::containsMap()
     } else {
         QString s;
         ui->InfoSet->setAlignment(Qt::AlignCenter);
-        ui->InfoSet->setText("Set doesn't contain the key " + key);
+        ui->InfoSet->setText("Map doesn't contain the key " + key);
     }
 }
 
