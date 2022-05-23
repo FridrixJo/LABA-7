@@ -3,7 +3,7 @@
 #include "bitset.h"
 
 int main() {
-	bitset<64> a;
+	std::bitset<100> a;
 	a.set();
 	std::cout << a.all() << "\n\n";
 	std::cout << a.to_string();

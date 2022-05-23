@@ -4,9 +4,10 @@
 
 template <size_t n>
 class bitset {
-public:
+private:
 	unsigned long long a;
 
+public:
 	bitset() {
 		this->a = 0;
 	}

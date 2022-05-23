@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->comboBox_all->addItems(QStringList() << " set() " << " reset() " << " all() " << " any() " << " none() " << " size() " << " to_string() " << " to_ulong() " << " to_ullong() " << " flip() ");
 
     ui->comboBox_one->addItems(QStringList() << " set(int) " << " reset(int) " << " flip(int) " << " test(int) ");
+
+    ui->spinBox->setRange(0,63);
 }
 
 MainWindow::~MainWindow()
